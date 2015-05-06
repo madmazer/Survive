@@ -17,17 +17,12 @@ var resources=[morale, food, scrapmetal,health];
 //Functions that effect resources
 
 //food
-function checkMorale(){
-navigator.vibrate(3000);
-    // preppare and load ad resource in background, e.g. at begining of game level
-// show the interstitial later, e.g. at end of game level
-if(AdMob) AdMob.showInterstitial();
-};
+
 
 //AD NETWORK
 
 // select the right Ad Id according to platform
-    var admobid = {};
+    var admobid = {pub-5220528240734098};
     if( /(android)/i.test(navigator.userAgent) ) { // for android
         admobid = {
             banner: 'ca-app-pub-5220528240734098/7483702620', // or DFP format "/6253334/dfp_example_ad"
@@ -61,3 +56,8 @@ $('#adverts').html(displayAd);
 
 
 }
+
+function checkMorale(){
+
+if(AdMob) AdMob.showInterstitial();
+};
