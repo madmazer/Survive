@@ -1,4 +1,4 @@
-cordova plugin add org.apache.cordova.vibration
+
 var survivors = 20;
 
 $('.topNav').html(survivors + " Survivors");
