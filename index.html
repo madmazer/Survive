@@ -78,7 +78,7 @@
 
                 <div class="ui-block-a">
                     <div class="ui-bar ui-bar-a">
-                        <button onclick="maxTotal()"></button>
+                        <button onclick="showTest()"></button>
                     </div>
                 </div>
 
@@ -94,30 +94,29 @@
 <body>
 
     <div data-role="page" id="cash">
+         <!-- PANEL START -->
+        <div data-role="panel" id="mypanel" data-display="overlay">
+            <a href="#my-header" data-rel="close">Close panel</a>
+            <a href="#Front" class="ui-btn ui-corner-all">Home</a>
+            <a href="#cash" class="ui-btn ui-corner-all" onclick="randomAd()">Workers</a>
+
+
+        </div>
+        <!-- PANEL END -->
         <div data-role="header" data-position="fixed">
-            <h1>Cash Money Baby</h1>
-            <div data-role="navbar">
+            <a href="#mypanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" ></a>
+            <h1 class="topNav">Test</h1>
 
-                <ul>
 
-                    <li><a href="#Front">One</a>
-                    </li>
-
-                    <li><a href="#cash" class="ui-btn-active">Two</a>
-                    </li>
-
-                </ul>
-            </div>
+        </div>
             <!-- /navbar -->
         </div>
-        <div role="main" class="ui-content" id="adverts">
+        
+        
+        <div role="main" class="ui-content" id="">
             <div class="ui-grid-a">
             
-                <div class="ui-block-a">
-                    <div class="ui-bar ui-bar-a" style="height:60px">
-                        <div id="adverts"></div>
-                    </div>
-                </div>
+                
             </div>
             <!-- /grid-a -->
 
