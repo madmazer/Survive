@@ -25,7 +25,7 @@ var resources=[morale, food, scrapmetal,health];
     var admobid = "pub-5220528240734098";
     if( /(android)/i.test(navigator.userAgent) ) { // for android
         admobid = {
-            banner: 'ca-app-pub-5220528240734098/7483702620', // or DFP format "/6253334/dfp_example_ad"
+            banner: 'ca-app-pub-5220528240734098/8681234220', // or DFP format "/6253334/dfp_example_ad"
             interstitial: 'ca-app-pub-5220528240734098/748370262'
         };
     } 
@@ -46,6 +46,10 @@ $('#adverts').html(displayAd);
 
 
 }
+$(document).ready(function(){
+  $("#adMob").html("jasonasdf");
+});
+
 
 function checkMorale(){
 
