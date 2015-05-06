@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="chance.js"></script>
+
+    <link rel="stylesheet" href="stlyinng.css" />
+</head>
+
+<body>
+
+    <!--PAGE 1 -->
+    <div data-role="page" id="Front">
+        <!-- PANEL START -->
+        <div data-role="panel" id="mypanel" data-display="overlay">
+            <a href="#my-header" data-rel="close">Close panel</a>
+            <a href="#Front" class="ui-btn ui-corner-all">Home</a>
+            <a href="#cash" class="ui-btn ui-corner-all" onclick="randomAd()">Workers</a>
+
+
+        </div>
+        <!-- PANEL END -->
+
+        <div data-role="header" data-position="fixed">
+            <a href="#mypanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" ></a>
+            <h1 class="topNav">Test</h1>
+
+
+        </div>
+        <div role="main" class="ui-content">
+            <div class="ui-grid-a">
+
+
+                <div class="frondCollDisp" data-role="collapsible" data-content-theme="false" data-mini="true" onclick="checkMorale()">
+
+                    <h4>Fresh Food</h4>
+                    <p>I'm the collapsible content without a theme.</p>
+                </div>
+
+
+
+                <div class="frondCollDisp" data-role="collapsible" data-content-theme="false" data-mini="true">
+
+                    <h4>Canned Goods</h4>
+                    <p>I'm the collapsible content without a theme.</p>
+                </div>
+
+
+
+
+                <div class="frondCollDisp" data-role="collapsible" data-content-theme="false" data-mini="true">
+
+                    <h4>Fresh</h4>
+                    <p>I'm the collapsible content without a theme.</p>
+                </div>
+
+
+                <div class="frondCollDisp" data-role="collapsible" data-content-theme="false" data-mini="true">
+
+                    <h4>Heading</h4>
+                    <p>I'm the collapsible content without a theme.</p>
+                </div>
+
+            </div>
+            
+
+
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <div class="ui-grid-a">
+
+                <div class="ui-block-a">
+                    <div class="ui-bar ui-bar-a">
+                        <button onclick="maxTotal()"></button>
+                    </div>
+                </div>
+
+                <div class="ui-block-b">
+                    <div class="ui-bar ui-bar-a">Block B</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!--PAGE 2 -->
+
+<body>
+
+    <div data-role="page" id="cash">
+        <div data-role="header" data-position="fixed">
+            <h1>Cash Money Baby</h1>
+            <div data-role="navbar">
+
+                <ul>
+
+                    <li><a href="#Front">One</a>
+                    </li>
+
+                    <li><a href="#cash" class="ui-btn-active">Two</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /navbar -->
+        </div>
+        <div role="main" class="ui-content" id="adverts">
+            <div class="ui-grid-a">
+            
+                <div class="ui-block-a">
+                    <div class="ui-bar ui-bar-a" style="height:60px">
+                        <div id="adverts"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- /grid-a -->
+
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>Fixed Footer!</h1>
+        </div>
+    </div>
+</body>
+<script src="chance.js"></script>
+<script src="brains.js"></script>
+
+</html>

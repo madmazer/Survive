@@ -1,0 +1,20 @@
+#custom-border-radius .ui-btn-icon-notext.ui-corner-all {
+    -webkit-border-radius: .3125em;
+    border-radius: .3125em;
+}
+
+img{
+
+max-width: 100%;
+display: block;
+    margin-left: auto;
+    margin-right: auto
+    }
+
+.frondCollDisp{
+
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: gainsboro;
+
+}
