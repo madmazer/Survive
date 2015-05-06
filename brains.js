@@ -1,5 +1,5 @@
 
-var survivors = 20;
+var survivors = 22;
 
 $('.topNav').html(survivors + " Survivors");
 //resources
@@ -22,23 +22,13 @@ var resources=[morale, food, scrapmetal,health];
 //AD NETWORK
 
 // select the right Ad Id according to platform
-    var admobid = {pub-5220528240734098};
+    var admobid = "pub-5220528240734098";
     if( /(android)/i.test(navigator.userAgent) ) { // for android
         admobid = {
             banner: 'ca-app-pub-5220528240734098/7483702620', // or DFP format "/6253334/dfp_example_ad"
-            interstitial: 'ca-app-pub-xxx/yyy'
+            interstitial: 'ca-app-pub-5220528240734098/748370262'
         };
-    } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) { // for ios
-        admobid = {
-            banner: 'ca-app-pub-xxx/zzz', // or DFP format "/6253334/dfp_example_ad"
-            interstitial: 'ca-app-pub-xxx/kkk'
-        };
-    } else { // for windows phone
-        admobid = {
-            banner: 'ca-app-pub-xxx/zzz', // or DFP format "/6253334/dfp_example_ad"
-            interstitial: 'ca-app-pub-xxx/kkk'
-        };
-    }
+    } 
 // preppare and load ad resource in background, e.g. at begining of game level
 if(AdMob) AdMob.prepareInterstitial( {adId:admobid.interstitial, autoShow:false} );
 
