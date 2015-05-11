@@ -1,25 +1,111 @@
-
 var survivors = 22;
+var availableWorkers = survivors;
 
 $('.topNav').html(survivors + " Survivors");
 //resources
 //currentVal-
-var morale=[50];
-var food=[10,25];
-var scrapmetal=[0];
-var health=[100];
+var morale = [50,"Morale"];
+var food = [100,"Food"];
+var scrapmetal = [0,"Scrap"];
+var health = [80,"Health"];
 
 
-var resources=[morale, food, scrapmetal,health];
+var resources = [food, scrapmetal,morale, health];
+
+var scavangers = [0, 0.2];
+var foragers = [0, 1];
+var farmers = [0, 0.2];
+var repairs = [0, 3.2];
+var doctors = [0, 0.4];
+
+var workers = [scavangers, foragers, farmers, repairs, doctors]
 
 
 
 //Functions that effect resources
 
-//food
+//Fucntions for adding and minusing workers to duties
+function adWorker(parm) {
+    if (availableWorkers > 0) {
+        var currentTotal = workers[parm][0];
+        workers[parm][0] = currentTotal+1;
+        availableWorkers = availableWorkers - 1;
+        console.log(availableWorkers);
+
+        console.log('Working ' + currentTotal);
+
+    }
+
+}
+
+function minusWorker(parm) {
+    
+    var currentTotal = workers[parm][0];
+    workers[parm][0] = currentTotal-1;
+    availableWorkers = availableWorkers + 1;
+     console.log(availableWorkers);
+
+        console.log('Working ' + currentTotal);
+    
+    
+
+}
+
+//TEST FUNCTION FOR AUTO ADDING RESPOURCES
+
+//FOOD
+
+//foodout
+
+setInterval(function () {
+    
+    var foodUse=0.4;
+    var foodout=parseInt(survivors*foodUse);
+    food[0]=food[0]-foodout;
+    rundisplay();
+    }, 1000);
+
+//foodin
+
+setInterval(function () {
+    
+    var foodFarms=workers[2][0]*workers[2][1];
+    var foodScav=workers[0][0]*workers[0][1];
+    var foodForag=workers[1][0]*workers[1][1];
+    var totalFoodIn=(foodFarms+foodForag+foodScav)
+   resources[0][0]=resources[0][0]+parseInt(totalFoodIn);
+    console.log("Total Food in "+totalFoodIn);
+    rundisplay();
+    }, 1000);
+//SCRAP
+//ScrapIn
+setInterval(function () {
+    
+    var foodFarms=workers[2][0]*workers[2][1];
+    var foodScav=workers[0][0]*workers[0][1];
+    var foodForag=workers[1][0]*workers[1][1];
+    var totalFoodIn=(foodFarms+foodForag+foodScav)
+   resources[0][0]=resources[0][0]+parseInt(totalFoodIn);
+    console.log("Total Food in "+totalFoodIn);
+    rundisplay();
+    }, 1000);
 
 
-//AD NETWORK
+//DISPLAY///////////////////////////////////////////////////
+
+function rundisplay(){for (i = 0; i < resources.length; i++) { 
+    
+    var selector=i;
+    $( "#disp"+selector+" h4" ).html( resources[i][1]+ " "+resources[i][0] );
+
+}}
+
+
+$(document).ready(function(){
+    $("button .btn-even").attr("width","500px");
+        
+    });
+/*//AD NETWORK
 
 // select the right Ad Id according to platform
     var admobid = "pub-5220528240734098";
@@ -47,11 +133,16 @@ $('#adverts').html(displayAd);
 
 }
 $(document).ready(function(){
-  $("#adMob").html("jasonasdf");
+    
+   var adddd=AdMob.createBanner( {
+    adId: admobid.banner, 
+    position: AdMob.AD_POSITION.TOP_CENTER, 
+    autoShow: true } ) ;
+  $("#adMob").html(adddd);
 });
 
 
 function checkMorale(){
 
 if(AdMob) AdMob.showInterstitial();
-};
+};*/

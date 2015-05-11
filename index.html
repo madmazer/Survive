@@ -5,12 +5,15 @@
 <head>
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="skeleton.css"/>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="chance.js"></script>
 
-    <link rel="stylesheet" href="stlyinng.css" />
+    
+        <link rel="stylesheet" href="stlyinng.css"/>
+
 </head>
 
 <body>
@@ -21,7 +24,7 @@
         <div data-role="panel" id="mypanel" data-display="overlay">
             <a href="#my-header" data-rel="close">Close panel</a>
             <a href="#Front" class="ui-btn ui-corner-all">Home</a>
-            <a href="#cash" class="ui-btn ui-corner-all" onclick="checkMorale()">Workers</a>
+            <a href="#workers" class="ui-btn ui-corner-all" onclick="">Workers</a>
 
 
         </div>
@@ -37,35 +40,41 @@
             <div class="ui-grid-a">
 
 
-                <div class="frondCollDisp" data-role="collapsible" data-content-theme="false" data-mini="true" onclick="checkMorale()">
+                <div class="frondCollDisp" id="disp0"  data-role="collapsible" data-content-theme="false" data-mini="true" onclick="checkMorale()">
 
-                    <h4>Fresh Food</h4>
-                    <p>I'm the collapsible content without a theme.</p>
+                    <h4>Food </h4>
+                    <p>Food is what keeps your people going, this is your main concern. If food reaches 0, people will starve and leave. </p>
                 </div>
 
 
 
-                <div class="frondCollDisp" data-role="collapsible" data-content-theme="false" data-mini="true">
+                <div class="frondCollDisp"  id="disp1" data-role="collapsible" data-content-theme="false" data-mini="true">
 
-                    <h4>Canned Goods</h4>
-                    <p>I'm the collapsible content without a theme.</p>
+                    <h4>Scrap Metal</h4>
+                    <p>Used to make upgrades to the base and equipment. Also used for crafting tools.</p>
                 </div>
 
 
 
 
-                <div class="frondCollDisp" data-role="collapsible" data-content-theme="false" data-mini="true">
+                <div class="frondCollDisp"  id="disp2" data-role="collapsible" data-content-theme="false" data-mini="true">
 
-                    <h4>Fresh</h4>
-                    <p>I'm the collapsible content without a theme.</p>
+                    <h4>Morale</h4>
+                    <p>You need to keep survivors happy, give them a reason to fear or love you.</p>
                 </div>
 
 
-                <div class="frondCollDisp" data-role="collapsible" data-content-theme="false" data-mini="true">
+                <div class="frondCollDisp" id="disp3"  data-role="collapsible" data-content-theme="false" data-mini="true">
+
+                    <h4>Health</h4>
+                    <p>How clean are your survivors. How quickly can illness spread in your base?  </p>
+                </div>
+                <div class="frondCollDisp" id="disp4"  data-role="collapsible" data-content-theme="false" data-mini="true">
 
                     <h4>Heading</h4>
                     <p>I'm the collapsible content without a theme.</p>
                 </div>
+
 
             </div>
             
@@ -84,39 +93,62 @@
 <!--PAGE 2 -->
 
 <body>
-
-    <div data-role="page" id="cash">
-         <!-- PANEL START -->
+  
+    <div data-role="page" id="workers">
+        <!-- PANEL START -->
         <div data-role="panel" id="mypanel" data-display="overlay">
             <a href="#my-header" data-rel="close">Close panel</a>
             <a href="#Front" class="ui-btn ui-corner-all">Home</a>
-            <a href="#cash" class="ui-btn ui-corner-all" onclick="randomAd()">Workers</a>
+            <a href="#cash" class="ui-btn ui-corner-all" onclick="checkMorale()">Workers</a>
 
 
         </div>
         <!-- PANEL END -->
+
         <div data-role="header" data-position="fixed">
             <a href="#mypanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" ></a>
             <h1 class="topNav">Test</h1>
 
 
         </div>
-            <!-- /navbar -->
-        </div>
+      <div role="main" class="ui-content">
+    <div class="container">
         
-        
-        <div role="main" class="ui-content" id="">
-            <div class="ui-grid-a">
+        <div class="row">
+          <div class="=ten columns">
+              <button class="ui-btn ui-btn-inline" onclick="minusWorker(0)">-</button><p class="workersDisp">Scavange</p><button class="ui-btn ui-btn-inline" onclick="adWorker(0)">+</button><button class="ui-btn ui-btn-inline">Max</button>
+        </div>     
+            <div class="=ten columns">
+              <button class="ui-btn ui-btn-inline" onclick="minusWorker(1)">-</button><p class="workersDisp">Forage</p><button class="ui-btn ui-btn-inline" onclick="adWorker(1)">+</button><button class="ui-btn ui-btn-inline">Max</button>
+        </div>    
+            <div class="=ten columns">
+              <button class="ui-btn ui-btn-inline" onclick="minusWorker(2)">-</button><p class="workersDisp">Farm</p><button class="ui-btn ui-btn-inline" onclick="adWorker(2)">+</button><button class="ui-btn ui-btn-inline">Max</button>
+        </div>    
+            <div class="=ten columns">
+              <button class="ui-btn ui-btn-inline " onclick="minusWorker(3)">-</button><p class="workersDisp">Repairs</p><button class="ui-btn ui-btn-inline" onclick="adWorker(3)">+</button><button class="ui-btn ui-btn-inline">Max</button>
+        </div>    
+            <div class="=ten columns">
+              <button class="ui-btn ui-btn-inline " onclick="minusWorker(4)">-</button><p class="workersDisp">Doctors</p><button class="ui-btn ui-btn-inline" onclick="adWorker(4)">+</button><button class="ui-btn ui-btn-inline">Max</button>
+        </div>    
             
-                
+            
+            
             </div>
-            <!-- /grid-a -->
+
+            
+
 
         </div>
+
         <div data-role="footer" data-position="fixed">
-            <h1>Fixed Footer!</h1>
+            <div class="ui-grid-a" id="adMob">
+                
+               
+            </div>
         </div>
     </div>
+
+    
 </body>
 <script src="chance.js"></script>
 <script src="brains.js"></script>
