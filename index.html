@@ -13,7 +13,7 @@
 
     
         <link rel="stylesheet" href="stlyinng.css"/>
-
+ 
 </head>
 
 <body>
@@ -21,10 +21,12 @@
     <!--PAGE 1 -->
     <div data-role="page" id="Front">
         <!-- PANEL START -->
-        <div data-role="panel" id="mypanel" data-display="overlay">
+        <div data-role="panel" id="mypanel" data-display="push" data-swipe-close="false">
             <a href="#my-header" data-rel="close">Close panel</a>
             <a href="#Front" class="ui-btn ui-corner-all">Home</a>
             <a href="#workers" class="ui-btn ui-corner-all" onclick="">Workers</a>
+            <button onclick="window.plugins.toast.showShortTop('Hello there!', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})">Toast showShortTop</button>
+
 
 
         </div>
@@ -96,10 +98,10 @@
   
     <div data-role="page" id="workers">
         <!-- PANEL START -->
-        <div data-role="panel" id="mypanel" data-display="overlay">
+        <div data-role="panel" id="mypanel" data-display="push" data-swipe-close="false">
             <a href="#my-header" data-rel="close">Close panel</a>
             <a href="#Front" class="ui-btn ui-corner-all">Home</a>
-            <a href="#cash" class="ui-btn ui-corner-all" onclick="checkMorale()">Workers</a>
+            <a href="#cash" class="ui-btn ui-corner-all" >Workers</a>
 
 
         </div>
