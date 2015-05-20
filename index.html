@@ -5,18 +5,18 @@
 <head>
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="skeleton.css"/>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="chance.js"></script>
 
-    
+        <link rel="stylesheet" href="skeleton.css"/>
         <link rel="stylesheet" href="stlyinng.css"/>
  
 </head>
 
 <body>
+    
 
     <!--PAGE 1 -->
     <div data-role="page" id="Front">
@@ -25,7 +25,7 @@
             <a href="#my-header" data-rel="close">Close panel</a>
             <a href="#Front" class="ui-btn ui-corner-all">Home</a>
             <a href="#workers" class="ui-btn ui-corner-all" onclick="">Workers</a>
-            <button onclick="window.plugins.toast.showShortTop('Hello there!', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})">Toast showShortTop</button>
+            
 
 
 
@@ -39,54 +39,59 @@
 
         </div>
         <div role="main" class="ui-content">
-            <div class="ui-grid-a">
-
-
-                <div class="frondCollDisp" id="disp0"  data-role="collapsible" data-content-theme="false" data-mini="true" onclick="checkMorale()">
-
-                    <h4>Food </h4>
-                    <p>Food is what keeps your people going, this is your main concern. If food reaches 0, people will starve and leave. </p>
-                </div>
-
-
-
-                <div class="frondCollDisp"  id="disp1" data-role="collapsible" data-content-theme="false" data-mini="true">
-
-                    <h4>Scrap Metal</h4>
-                    <p>Used to make upgrades to the base and equipment. Also used for crafting tools.</p>
-                </div>
-
-
-
-
-                <div class="frondCollDisp"  id="disp2" data-role="collapsible" data-content-theme="false" data-mini="true">
-
-                    <h4>Morale</h4>
-                    <p>You need to keep survivors happy, give them a reason to fear or love you.</p>
-                </div>
-
-
-                <div class="frondCollDisp" id="disp3"  data-role="collapsible" data-content-theme="false" data-mini="true">
-
-                    <h4>Health</h4>
-                    <p>How clean are your survivors. How quickly can illness spread in your base?  </p>
-                </div>
-                <div class="frondCollDisp" id="disp4"  data-role="collapsible" data-content-theme="false" data-mini="true">
-
-                    <h4>Heading</h4>
-                    <p>I'm the collapsible content without a theme.</p>
-                </div>
-
-
-            </div>
-            
+        <table class="u-full-width">
+  <table data-role="table" data-mode="columntoggle" class="ui-responsive" id="myTable">
+  <thead>
+    <tr>
+      <th> Name</th>
+      <th></th>
+    
+      <th>Owned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="disp_tblname0">Scrap</td>
+      <td id="disp_tblrate0" >0.3</td>
+      <td id="disp_tblowned0" >1000</td>
+    </tr>
+  </tbody>
+      tbody>
+    <tr>
+      <td id="disp_tblname1">Scrap</td>
+      <td id="disp_tblrate1" >0.3</td>
+      <td id="disp_tblowned1" >1000</td>
+    </tr>
+  </tbody>
+       <tbody>
+    <tr>
+      <td id="disp_tblname2">Scrap</td>
+      <td id="disp_tblrate2" >0.3</td>
+      <td id="disp_tblowned2" >1000</td>
+    </tr>
+  </tbody>
+       <tbody>
+    <tr>
+      <td id="disp_tblname3">Scrap</td>
+      <td id="disp_tblrate3" >0.3</td>
+      <td id="disp_tblowned3" >1000</td>
+    </tr>
+  </tbody>
+       <tbody>
+    <tr>
+      <td id="disp_tblname4">Scrap</td>
+      <td id="disp_tblrate4" >0.3</td>
+      <td id="disp_tblowned4" >1000</td>
+    </tr>
+  </tbody>
+</table>
 
 
         </div>
 
         <div data-role="footer" data-position="fixed">
             <div class="ui-grid-a" id="adMob">
-                
+                Test
                
             </div>
         </div>
@@ -98,7 +103,7 @@
   
     <div data-role="page" id="workers">
         <!-- PANEL START -->
-        <div data-role="panel" id="mypanel" data-display="push" data-swipe-close="false">
+        <div data-role="panel" id="mypanel1" data-display="push" data-swipe-close="false">
             <a href="#my-header" data-rel="close">Close panel</a>
             <a href="#Front" class="ui-btn ui-corner-all">Home</a>
             <a href="#cash" class="ui-btn ui-corner-all" >Workers</a>
@@ -108,7 +113,7 @@
         <!-- PANEL END -->
 
         <div data-role="header" data-position="fixed">
-            <a href="#mypanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" ></a>
+            <a href="#mypanel1" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" ></a>
             <h1 class="topNav">Test</h1>
 
 
@@ -143,7 +148,8 @@
         </div>
 
         <div data-role="footer" data-position="fixed">
-            <div class="ui-grid-a" id="adMob">
+            <div class="ui-grid-a" id="">
+                Teat
                 
                
             </div>
